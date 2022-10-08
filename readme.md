@@ -1,5 +1,4 @@
-# pFedKnow:  Knowledge-Enhanced Semi-Supervised Federated Learning for
-Aggregating Heterogeneous Lightweight Clients in IoT 
+# pFedKnow:  Knowledge-Enhanced Semi-Supervised Federated Learning for Aggregating Heterogeneous Lightweight Clients in IoT 
 
 A PyTorch implementation for the paper: **Knowledge-Enhanced Semi-Supervised Federated Learning for Aggregating Heterogeneous Lightweight Clients in IoT**
 
