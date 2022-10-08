@@ -1,0 +1,70 @@
+Truncation was not explicitly activated but `max_length` is provided a specific value, please use `truncation=True` to explicitly truncate examples to max length. Defaulting to 'longest_first' truncation strategy. If you encode pairs of sequences (GLUE-style) with the tokenizer you can select this strategy more precisely by providing a specific strategy to `truncation`.
+/opt/anaconda3/envs/jqtext/lib/python3.8/site-packages/transformers/tokenization_utils_base.py:2226: FutureWarning: The `pad_to_max_length` argument is deprecated and will be removed in a future version, use `padding=True` or `padding='longest'` to pad to the longest sequence in the batch, or use `padding='max_length'` to pad to a max length. In this case, you can give a specific length with `max_length` (e.g. `max_length=45`) or leave max_length to None to pad to the maximal input size of the model (e.g. 512 for Bert).
+  warnings.warn(
+
+Experimental details:
+    GPUID     : cuda:1
+    Model     : BERT
+    Global Rounds   : 100
+
+    Federated parameters:
+    IID
+    Fraction of users  : 0.1
+    Local Batch size   : 8
+    Local Training Epochs: 3
+
+Traceback (most recent call last):
+  File "federated_main.py", line 40, in <module>
+    train_dataset, test_dataset, user_groups = get_dataset(args) #TODO get a new dataset
+  File "/home/jmw7289/ys/own_vanilla_bert_fedavg/src/utils.py", line 78, in get_dataset
+    train_dataset = generate_tok_dataloader(train_raw_dataset, tokenizer)
+  File "/home/jmw7289/ys/own_vanilla_bert_fedavg/src/utils.py", line 41, in generate_tok_dataloader
+    encoded_dict = tokenizer.encode_plus(
+  File "/opt/anaconda3/envs/jqtext/lib/python3.8/site-packages/transformers/tokenization_utils_base.py", line 2511, in encode_plus
+    return self._encode_plus(
+  File "/opt/anaconda3/envs/jqtext/lib/python3.8/site-packages/transformers/tokenization_utils.py", line 640, in _encode_plus
+    first_ids = get_input_ids(text)
+  File "/opt/anaconda3/envs/jqtext/lib/python3.8/site-packages/transformers/tokenization_utils.py", line 609, in get_input_ids
+    tokens = self.tokenize(text, **kwargs)
+  File "/opt/anaconda3/envs/jqtext/lib/python3.8/site-packages/transformers/tokenization_utils.py", line 540, in tokenize
+    tokenized_text.extend(self._tokenize(token))
+  File "/opt/anaconda3/envs/jqtext/lib/python3.8/site-packages/transformers/models/bert/tokenization_bert.py", line 229, in _tokenize
+    split_tokens += self.wordpiece_tokenizer.tokenize(token)
+  File "/opt/anaconda3/envs/jqtext/lib/python3.8/site-packages/transformers/models/bert/tokenization_bert.py", line 539, in tokenize
+    if substr in self.vocab:
+KeyboardInterrupt
+Truncation was not explicitly activated but `max_length` is provided a specific value, please use `truncation=True` to explicitly truncate examples to max length. Defaulting to 'longest_first' truncation strategy. If you encode pairs of sequences (GLUE-style) with the tokenizer you can select this strategy more precisely by providing a specific strategy to `truncation`.
+/opt/anaconda3/envs/jqtext/lib/python3.8/site-packages/transformers/tokenization_utils_base.py:2226: FutureWarning: The `pad_to_max_length` argument is deprecated and will be removed in a future version, use `padding=True` or `padding='longest'` to pad to the longest sequence in the batch, or use `padding='max_length'` to pad to a max length. In this case, you can give a specific length with `max_length` (e.g. `max_length=45`) or leave max_length to None to pad to the maximal input size of the model (e.g. 512 for Bert).
+  warnings.warn(
+
+Experimental details:
+    GPUID     : cuda:1
+    Model     : BERT
+    Global Rounds   : 100
+
+    Federated parameters:
+    IID
+    Fraction of users  : 0.1
+    Local Batch size   : 8
+    Local Training Epochs: 3
+
+Traceback (most recent call last):
+  File "federated_main.py", line 40, in <module>
+    train_dataset, test_dataset, user_groups = get_dataset(args) #TODO get a new dataset
+  File "/home/jmw7289/ys/own_vanilla_bert_fedavg/src/utils.py", line 78, in get_dataset
+    train_dataset = generate_tok_dataloader(train_raw_dataset, tokenizer)
+  File "/home/jmw7289/ys/own_vanilla_bert_fedavg/src/utils.py", line 41, in generate_tok_dataloader
+    encoded_dict = tokenizer.encode_plus(
+  File "/opt/anaconda3/envs/jqtext/lib/python3.8/site-packages/transformers/tokenization_utils_base.py", line 2511, in encode_plus
+    return self._encode_plus(
+  File "/opt/anaconda3/envs/jqtext/lib/python3.8/site-packages/transformers/tokenization_utils.py", line 643, in _encode_plus
+    return self.prepare_for_model(
+  File "/opt/anaconda3/envs/jqtext/lib/python3.8/site-packages/transformers/tokenization_utils_base.py", line 2976, in prepare_for_model
+    encoded_inputs = self.pad(
+  File "/opt/anaconda3/envs/jqtext/lib/python3.8/site-packages/transformers/tokenization_utils_base.py", line 2776, in pad
+    padding_strategy, _, max_length, _ = self._get_padding_truncation_strategies(
+  File "/opt/anaconda3/envs/jqtext/lib/python3.8/site-packages/transformers/tokenization_utils_base.py", line 2250, in _get_padding_truncation_strategies
+    padding_strategy = PaddingStrategy(padding)
+  File "/opt/anaconda3/envs/jqtext/lib/python3.8/enum.py", line 339, in __call__
+    return cls.__new__(cls, value)
+KeyboardInterrupt
